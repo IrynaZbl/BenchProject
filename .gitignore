@@ -1,0 +1,144 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Visual Studio Code files
+.vscode/
+
+# Mac files
+.DS_Store
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VsCode Extensions
+.vscode/extensions.json
+
+# User-specific files (VSCode)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Log and database files
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# Application Insights
+*.ai.config
+
+# Web config
+web.config
+appsettings.json
+appsettings.*.json
+
+# Rider and Resharper files
+.idea/
+*.sln.iml
+*.DotSettings.user
+*.DotSettings
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# NCrunch files
+_NCrunch_*
+.*crunch*
+
+# CodeRush
+.Coderush/
+
+# Backup & report files from converting an old project file
+*.Backup
+*.Report.xml
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# npm package files
+node_modules/
+wwwroot/lib/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Code coverage
+*.coverage
+*.coveragexml
+
+# Microsoft Azure Web App publish settings
+*.PublishSettings
+
+# Publish output
+.publish/
+
+# Local History for Visual Studio
+.vs/
+
+# Backup folders
+_backup/
+_backup*/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Excel temp files
+~$*
+
+# Windows Explorer Thumbs.db files
+Thumbs.db
+ehthumbs.db
+
+# Mac files
+.DS_Store
+
+# Rider files
+.idea/
+.idea_modules/
+*.sln.iml
+
+# Playwright files
+playwright-report/
+playwright/.cache/
