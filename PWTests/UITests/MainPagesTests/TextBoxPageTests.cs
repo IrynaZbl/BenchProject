@@ -1,9 +1,10 @@
-﻿using PWCore.WebDriver;
+﻿using FluentAssertions;
+using PWCore.WebDriver;
 using PWPages.DemoQA;
 
 namespace PWTests.UITests.MainPagesTests
 {
-    class TextBoxPageTests
+    public class TextBoxTests
     {
         private Browser _browser;
         private BrowserConfig _config;
@@ -37,10 +38,10 @@ namespace PWTests.UITests.MainPagesTests
 
             await textBoxPage.ClickSubmitAsync();
 
-            Assert.That(await textBoxPage.GetResultTextAsync("name"), Does.Contain(fullName));
-            Assert.That(await textBoxPage.GetResultTextAsync("email"), Does.Contain(email));
-            Assert.That(await textBoxPage.GetResultTextAsync("currentAddress"), Does.Contain(currentAddress));
-            Assert.That(await textBoxPage.GetResultTextAsync("permanentAddress"), Does.Contain(permanentAddress));
+            (await textBoxPage.GetResultTextAsync("name")).Should().Contain(fullName);
+            (await textBoxPage.GetResultTextAsync("email")).Should().Contain(email);
+            (await textBoxPage.GetResultTextAsync("currentAddress")).Should().Contain(currentAddress);
+            (await textBoxPage.GetResultTextAsync("permanentAddress")).Should().Contain(permanentAddress);
         }
 
         [TearDown]
