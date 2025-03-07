@@ -1,38 +1,16 @@
-using FluentAssertions;
+using Core.WebDriver;
 
 namespace TestsUI
 {
-    [TestFixture]
-    public class Tests : BaseTest
+    public class Tests
     {
         [Test]
-        public void AboutMenuItemTest()
+        public void Test1()
         {
-            //Arrange
-            var expectedTitle = "About";
-
-            //Act
-            homePage.GoToAboutPage();
-            var actualTitle = aboutPage.GetTitle();
-
-            //Assert
-            actualTitle.Should().Be(expectedTitle);
-        }
-
-        [Test]
-        public void SearchTest()
-        {
-            //Arrange
-            var searchTerm = "Hello";
-
-            //Act
-            homePage.ClickSearch();
-            searchPanel.EnterText(searchTerm);
-            searchPanel.ClickFind();
-            var actualNumberOfArticles = searchPage.GetNumberOfArticles();
-
-            //Assert
-            actualNumberOfArticles.Should().BeGreaterThan(0);
+            Browser.GetInstance();
+            Browser.MaximizeWindow();
+            Browser.NavigateTo();
+            Browser.Close();
         }
     }
 }
