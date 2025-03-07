@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWTests", "PWTests\PWTests.csproj", "{7E281BEC-3B35-4AFE-9B55-74DC8F687B9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{D765D1A3-14CC-4563-AE25-B7E158FFC3A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWCore", "PWCore\PWCore.csproj", "{76A83CD6-DCDB-4280-8513-0AE39496DCC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWPages", "PWPages\PWPages.csproj", "{3EEBA8E6-81BD-4F4A-B661-EE6B6C93BDBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +36,14 @@ Global
 		{D765D1A3-14CC-4563-AE25-B7E158FFC3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D765D1A3-14CC-4563-AE25-B7E158FFC3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D765D1A3-14CC-4563-AE25-B7E158FFC3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A83CD6-DCDB-4280-8513-0AE39496DCC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A83CD6-DCDB-4280-8513-0AE39496DCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A83CD6-DCDB-4280-8513-0AE39496DCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A83CD6-DCDB-4280-8513-0AE39496DCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EEBA8E6-81BD-4F4A-B661-EE6B6C93BDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EEBA8E6-81BD-4F4A-B661-EE6B6C93BDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EEBA8E6-81BD-4F4A-B661-EE6B6C93BDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EEBA8E6-81BD-4F4A-B661-EE6B6C93BDBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
