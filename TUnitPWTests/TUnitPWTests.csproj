@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="TUnit" Version="0.16.28" />
+        <PackageReference Include="TUnit.Playwright" Version="0.16.23" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PWCore\PWCore.csproj" />
+      <ProjectReference Include="..\PWPages\PWPages.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Configs\appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Configs\browserConfig.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
