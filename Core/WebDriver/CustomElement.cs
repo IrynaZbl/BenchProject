@@ -3,11 +3,11 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Core.WebDriver
 {
-    public class CurrentElement
+    public class CustomElement
     {
         private By locator;
 
-        public CurrentElement(By locator)
+        public CustomElement(By locator)
         {
             this.locator = locator;
         }
@@ -17,13 +17,13 @@ namespace Core.WebDriver
             WaitForElementToBePresent()?.Click();
         }
 
-        public List<CurrentElement> FindElements(By locator)
+        public List<CustomElement> FindElements(By locator)
         {
             var results = WaitForElementToBePresent()?.FindElements(locator);
-            var elements = new List<CurrentElement>();
+            var elements = new List<CustomElement>();
             foreach (var result in results)
             {
-                elements.Add(new CurrentElement(locator));
+                elements.Add(new CustomElement(locator));
             }
 
             return elements;

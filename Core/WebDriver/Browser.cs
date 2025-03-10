@@ -1,21 +1,20 @@
 ﻿using OpenQA.Selenium;
-using static Core.WebDriver.WebDriverFactory;
 
 namespace Core.WebDriver
 {
     public class Browser
     {
         public static IWebDriver Driver { get; private set; }
-        private static readonly Browser instance = new Browser();
+        private static Browser instance;
 
         private Browser()
         {
-            Driver = BrowserFactory.GetDriver(Configuration.BrowserType);
+            Driver = WebDriverFactory.GetDriver(Configuration.BrowserType);
         }
 
         public static Browser CreateInstance()
         {
-            return instance;
+            return instance ?? (instance = new Browser());
         }
 
         public void NavigateTo()
@@ -32,6 +31,7 @@ namespace Core.WebDriver
         {
             Driver.Quit();
             Driver.Dispose();
+            instance = null;
         }
     }
 }

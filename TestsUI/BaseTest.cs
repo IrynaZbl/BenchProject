@@ -5,12 +5,13 @@ namespace TestsUI
 {
     public abstract class BaseTest
     {
-        protected Browser instance = Browser.CreateInstance();
+        protected Browser instance;
         protected readonly HomePage homePage = new HomePage();
 
         [SetUp]
         public virtual void SetUp()
         {
+            instance = Browser.CreateInstance();
             instance.MaximizeWindow();
             instance.NavigateTo();
         }

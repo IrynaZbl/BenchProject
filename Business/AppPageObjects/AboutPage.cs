@@ -5,7 +5,7 @@ namespace Business.AppPageObjects
 {
     public class AboutPage : BasePage
     {
-        private readonly CurrentElement pageTitle = new CurrentElement(By.XPath("//span[@class='rte-text-gradient']/span[text()='About']"));
+        private readonly CustomElement pageTitle = new CustomElement(By.XPath("//span[@class='rte-text-gradient']/span[text()='About']"));
 
         public AboutPage() : base() { }
 

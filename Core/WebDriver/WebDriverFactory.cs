@@ -5,23 +5,20 @@ namespace Core.WebDriver
 {
     public static class WebDriverFactory
     {
-        public class BrowserFactory
+        public static IWebDriver GetDriver(BrowserType type)
         {
-            public static IWebDriver GetDriver(BrowserType type)
+            switch (type)
             {
-                switch (type)
-                {
-                    case BrowserType.Chrome:
-                        {
-                            return new ChromeBrowserDriver().Driver;
-                        }
-                    case BrowserType.Firefox:
-                        {
-                            return new FirefoxBrowserDriver().Driver;
-                        }
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(type), type, null);
-                }
+                case BrowserType.Chrome:
+                    {
+                        return new ChromeBrowserDriver().Driver;
+                    }
+                case BrowserType.Firefox:
+                    {
+                        return new FirefoxBrowserDriver().Driver;
+                    }
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
         }
     }

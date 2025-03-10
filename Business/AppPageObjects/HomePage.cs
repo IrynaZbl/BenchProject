@@ -5,8 +5,8 @@ namespace Business.AppPageObjects
 {
     public class HomePage : BasePage
     {
-        private readonly CurrentElement aboutMenuItem = new CurrentElement(By.XPath("//span/a[text()='About']"));
-        private readonly CurrentElement searchIcon = new CurrentElement(By.XPath("//button[contains(@class,'header-search')]"));
+        private readonly CustomElement aboutMenuItem = new CustomElement(By.XPath("//span/a[text()='About']"));
+        private readonly CustomElement searchIcon = new CustomElement(By.XPath("//button[contains(@class,'header-search')]"));
 
         public HomePage() : base() { }
 

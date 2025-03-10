@@ -6,7 +6,7 @@ namespace Business.AppPageObjects
     public class SearchPage : BasePage
     {
         private static readonly By articleLocator = By.XPath("//div[contains(@class,'search-results')]/article");
-        private readonly CurrentElement results = new CurrentElement(By.XPath("//h2[contains(@class,'search-results')]"));
+        private readonly CustomElement results = new CustomElement(By.XPath("//h2[contains(@class,'search-results')]"));
 
         public SearchPage() : base() { }
 

@@ -5,8 +5,8 @@ namespace Business.AppPageObjects
 {
     public class SearchPanel : BasePage
     {
-        private readonly CurrentElement searchInput = new CurrentElement(By.Id("new_form_search"));
-        private readonly CurrentElement findButton = new CurrentElement(By.ClassName("bth-text-layer"));
+        private readonly CustomElement searchInput = new CustomElement(By.Id("new_form_search"));
+        private readonly CustomElement findButton = new CustomElement(By.ClassName("bth-text-layer"));
 
         public SearchPanel() : base() { }
 
