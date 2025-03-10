@@ -5,16 +5,14 @@ namespace Business.AppPageObjects
 {
     public class SearchPage : BasePage
     {
-        private static readonly By pageTitleLocator = By.XPath("//span[contains(@class,'rte-text-gradient')][text()='Search']");
-        private static readonly By articleLocator = By.XPath("//div[contains(@class,'earch-results')]/article");
+        private static readonly By articleLocator = By.XPath("//div[contains(@class,'search-results')]/article");
+        private readonly CustomElement results = new CustomElement(By.XPath("//h2[contains(@class,'search-results')]"));
 
-        public SearchPage() : base(pageTitleLocator) { }
-
-        private readonly BaseElement article = new BaseElement(articleLocator);
+        public SearchPage() : base() { }
 
         public int GetNumberOfArticles()
         {
-            return article.FindElements(articleLocator).Count;
+            return results.FindElements(articleLocator).Count;
         }
     }
 }

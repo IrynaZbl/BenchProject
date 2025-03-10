@@ -5,11 +5,9 @@ namespace Business.AppPageObjects
 {
     public class AboutPage : BasePage
     {
-        private static readonly By pageTitleLocator = By.XPath("//span[@class='rte-text-gradient']/span[text()='About']");
+        private readonly CustomElement pageTitle = new CustomElement(By.XPath("//span[@class='rte-text-gradient']/span[text()='About']"));
 
-        public AboutPage() : base(pageTitleLocator) { }
-
-        private readonly BaseElement pageTitle = new BaseElement(pageTitleLocator);
+        public AboutPage() : base() { }
 
         public string GetTitle()
         {

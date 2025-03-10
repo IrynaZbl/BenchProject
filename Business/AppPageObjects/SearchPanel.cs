@@ -5,12 +5,10 @@ namespace Business.AppPageObjects
 {
     public class SearchPanel : BasePage
     {
-        private static readonly By panelTitleLocator = By.XPath("//span[contains(@class,'header-search')][text()='Search']");
+        private readonly CustomElement searchInput = new CustomElement(By.Id("new_form_search"));
+        private readonly CustomElement findButton = new CustomElement(By.ClassName("bth-text-layer"));
 
-        public SearchPanel() : base(panelTitleLocator) { }
-
-        private readonly BaseElement searchInput = new BaseElement(By.Id("new_form_search"));
-        private readonly BaseElement findButton = new BaseElement(By.ClassName("bth-text-layer"));
+        public SearchPanel() : base() { }
 
         public void EnterText(string text)
         {

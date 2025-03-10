@@ -5,12 +5,10 @@ namespace Business.AppPageObjects
 {
     public class HomePage : BasePage
     {
-        private static readonly By epamIconLocator = By.ClassName("logo-print");
+        private readonly CustomElement aboutMenuItem = new CustomElement(By.XPath("//span/a[text()='About']"));
+        private readonly CustomElement searchIcon = new CustomElement(By.XPath("//button[contains(@class,'header-search')]"));
 
-        public HomePage() : base(epamIconLocator) { }
-
-        private readonly BaseElement aboutMenuItem = new BaseElement(By.XPath("//span/a[text()='About']"));
-        private readonly BaseElement searchIcon = new BaseElement(By.XPath("//button[contains(@class,'header-search')]"));
+        public HomePage() : base() { }
 
         public void GoToAboutPage()
         {

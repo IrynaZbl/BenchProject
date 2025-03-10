@@ -1,14 +1,9 @@
-﻿using OpenQA.Selenium;
-
-namespace Business.AppPageObjects
+﻿namespace Business.AppPageObjects
 {
     public abstract class BasePage
     {
-        protected By locator;
-
-        protected BasePage(By locator)
+        protected BasePage()
         {
-            this.locator = locator;
         }
     }
 }
