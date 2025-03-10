@@ -3,36 +3,32 @@ using static Core.WebDriver.WebDriverFactory;
 
 namespace Core.WebDriver
 {
-    public sealed class Browser
+    public class Browser
     {
         public static IWebDriver Driver { get; private set; }
         private static readonly Browser instance = new Browser();
-
-        static Browser()
-        {
-        }
 
         private Browser()
         {
             Driver = BrowserFactory.GetDriver(Configuration.BrowserType);
         }
 
-        public static Browser GetInstance()
+        public static Browser CreateInstance()
         {
             return instance;
         }
 
-        public static void NavigateTo()
+        public void NavigateTo()
         {
             Driver.Navigate().GoToUrl(Configuration.AppUrl);
         }
 
-        public static void MaximizeWindow()
+        public void MaximizeWindow()
         {
             Driver.Manage().Window.Maximize();
         }
 
-        public static void Close()
+        public void Close()
         {
             Driver.Quit();
             Driver.Dispose();

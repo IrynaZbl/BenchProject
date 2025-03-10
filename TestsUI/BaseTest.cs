@@ -5,23 +5,20 @@ namespace TestsUI
 {
     public abstract class BaseTest
     {
+        protected Browser instance = Browser.CreateInstance();
         protected readonly HomePage homePage = new HomePage();
-        protected readonly AboutPage aboutPage = new AboutPage();
-        protected readonly SearchPanel searchPanel = new SearchPanel();
-        protected readonly SearchPage searchPage = new SearchPage();
 
         [SetUp]
         public virtual void SetUp()
         {
-            Browser.GetInstance();
-            Browser.MaximizeWindow();
-            Browser.NavigateTo();
+            instance.MaximizeWindow();
+            instance.NavigateTo();
         }
 
         [TearDown]
         public virtual void TearDown()
         {
-            Browser.Close();
+            instance.Close();
         }
     }
 }

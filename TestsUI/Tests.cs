@@ -1,3 +1,4 @@
+using Business.AppPageObjects;
 using FluentAssertions;
 
 namespace TestsUI
@@ -5,6 +6,10 @@ namespace TestsUI
     [TestFixture]
     public class Tests : BaseTest
     {
+        protected readonly AboutPage aboutPage = new AboutPage();
+        protected readonly SearchPanel searchPanel = new SearchPanel();
+        protected readonly SearchPage searchPage = new SearchPage();
+
         [Test]
         public void AboutMenuItemTest()
         {
