@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Microsoft.Extensions.Configuration;
 
 namespace PWCore.WebDriver
 {
@@ -14,14 +13,7 @@ namespace PWCore.WebDriver
 
         public static BrowserConfig Load()
         {
-            // Путь относительно bin (где запускаются тесты)
-            var config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("Configs/appsettings.json")
-                .Build();
-
-            string configPath = config["BrowserConfigPath"];
-            string fullPath = Path.Combine(Directory.GetCurrentDirectory(), configPath);
+            string fullPath = Path.Combine(Directory.GetCurrentDirectory(), "Configs/browserConfig.json");
 
             if (!File.Exists(fullPath))
                 throw new FileNotFoundException($"Config file not found: {fullPath}");
