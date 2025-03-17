@@ -142,3 +142,6 @@ ehthumbs.db
 # Playwright files
 playwright-report/
 playwright/.cache/
+
+#secrets
+secrets.json

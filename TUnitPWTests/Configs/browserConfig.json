@@ -1,0 +1,21 @@
+{
+  "BaseUrl": "https://demoqa.com/",
+  "Browser": "chromium",
+  "Headless": false,
+  "SlowMo": 0,
+  "Timeout": 30000,
+  "Browsers": {
+    "chromium": {
+      "ExecutablePath": null,
+      "Args": [ "--start-maximized" ]
+    },
+    "firefox": {
+      "ExecutablePath": null,
+      "Args": []
+    },
+    "webkit": {
+      "ExecutablePath": null,
+      "Args": []
+    }
+  }
+}
